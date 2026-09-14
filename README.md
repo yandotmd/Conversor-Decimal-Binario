@@ -1,6 +1,6 @@
 # Conversor Decimal-Binário 
 
-Conversor simples em Python que traduz um número decimal para binário, 
+Conversor simples em Python que traduz um número de base 10 para binário, 
 com suporte a diferentes tamanhos de bits.
 
 ## Como funciona
