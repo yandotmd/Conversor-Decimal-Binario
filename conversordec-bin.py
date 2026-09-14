@@ -1,16 +1,18 @@
 import os, time
 prewrite = []
-
+# Define apenas um cabeçalho
 def top():
     print("Conversor simples Decimal - Binário : Por Yan Mendes")
 
+# Limpa o que tinha sido exibido
 def cls():
     os.system("cls")
 
 top()
+print("Opções de tamnho do número traduzido:")
 print("A - 4 bits (0-15), B - 8 bits (0-255), C - 16 bits (0-65535), D - 32 bits (0-4294967296)  *Padrão - D")
 
-
+# Faz um loop para o usuário selecionar a opção, se digitar errado o programa avisa e corrige se for da vontade do usuário
 while True:
     option = input("Qual o tamanho, em bits, do número traduzido? ")
     if option == "A" or option == "a":
@@ -36,12 +38,13 @@ while True:
             print("definição mantida.")
             break
 
-
+# Função matemática
 def operador(valor):
     resto = valor%2
     entrada = valor//2
     return resto, entrada
 
+# Loop para garantir a inserção de um número válido
 while True:
     try:
         cls()
@@ -55,7 +58,7 @@ while True:
         continue
     else:
         break
-
+#Loop de tradução
 while not (entrada == 0 or entrada == 1):
     resto, entrada = operador(entrada)
     prewrite.append(resto)
@@ -63,17 +66,20 @@ while not (entrada == 0 or entrada == 1):
         prewrite.append(entrada)
 
 flength = len(prewrite)
-
+# vê o tamnho que ficou para replicar o problema de estouro dos computadores e calculadoras antigas
 if flength > length:
     print("Estouro!!! Excedeu o tamanho de bits!")
     quit()
 
 wrote = ""
+# Inverte a lista
 write = prewrite[::-1]
 
+# Une tudo em texto
 for things in write:
     wrote = wrote + str(things)
-
+# Completa com zerors para atender o tamanho especificado
 wrote = wrote.zfill(length)
 
+# mostra na tela
 print(wrote)
