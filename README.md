@@ -15,6 +15,8 @@ atingir o tamanho de bits escolhido.
 Caso o número seja grande demais 
 para o tamanho selecionado, o programa avisa "Estouro" e é encerrado.
 
+Obs.: Feito para o Windows, pode ter comportamento inesperado ou simplesmente não funcionar em outros ambientes.
+
 ## Autor
 
 Por Yan Mendes
